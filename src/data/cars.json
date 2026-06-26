@@ -1,0 +1,187 @@
+[
+  {
+    "id": "ferrari-laferrari",
+    "marca": "Ferrari",
+    "modelo": "LaFerrari",
+    "pais": "Italia",
+    "imagen": "ferrari-laferrari.jpg",
+    "historia": "Nacido en 2013 como el sucesor del Enzo, el LaFerrari fue el primer hypercar híbrido de Maranello. Ferocidad pura con la elegancia del cavallino rampante.",
+    "motivacion": "Ferrari queria demostrar que la hibridacion no era solo para ahorrar combustible, sino para llevar el rendimiento al extremo. Nacio como el auto de calle mas avanzado jamas construido por la marca.",
+    "especificaciones": {
+      "año": 2013,
+      "motor": "V12 6.3L + HY-KERS electrico",
+      "potencia": 963,
+      "aceleracion": 2.6,
+      "velocidadMaxima": 350
+    },
+    "impacto": "Forma parte de la 'Santísima Trinidad' junto al McLaren P1 y el Porsche 918. Demostró que un Ferrari híbrido podía ser más salvaje que uno puramente combustión.",
+    "famosoPor": "Es la expresion maxima de Ferrari en su epoca: un V12 atmosferico asistido por electricidad que entrega casi 1000 CV. Solo 499 unidades, todas vendidas antes de fabricarse.",
+    "categoria": "leyenda"
+  },
+  {
+    "id": "ferrari-f40",
+    "marca": "Ferrari",
+    "modelo": "F40",
+    "pais": "Italia",
+    "imagen": "ferrari-f40.jpg",
+    "historia": "El Ferrari F40 nacio en 1987 como el ultimo auto supervisado por Enzo Ferrari antes de su muerte. Fue construido para celebrar el 40 aniversario de la marca y se convirtio en el auto de calle mas rapido de su epoca.",
+    "motivacion": "Ferrari queria crear el auto definitivo, sin concesiones: sin ABS, sin direccion asistida, sin electronica. Solo un V8 biturbo con chasis de kevlar y fibra de carbono. Pura bestia.",
+    "especificaciones": {
+      "año": 1987,
+      "motor": "V8 2.9L Biturbo",
+      "potencia": 478,
+      "aceleracion": 4.0,
+      "velocidadMaxima": 324
+    },
+    "impacto": "Definió la era de los superdeportivos modernos. Fue el primer auto de serie en superar los 320 km/h y marcó a toda una generacion de entusiastas.",
+    "categoria": "clasico"
+  },
+  {
+    "id": "lamborghini-murcielago",
+    "marca": "Lamborghini",
+    "modelo": "Murciélago LP640",
+    "pais": "Italia",
+    "imagen": "lambo-murcielago.jpg",
+    "historia": "Nacido en 2001 como el reemplazo del Diablo, el Murciélago fue el primer Lamborghini bajo el paraguas de Audi. Su nombre honra al toro de la famosa corrida de 1879 que sobrevivió a 24 estocadas.",
+    "motivacion": "Lamborghini necesitaba un sucesor del Diablo que mantuviera la esencia V12 pero con la calidad de construccion que Audi exigia. No fue facil: la ingenieria alemana chocaba con el alma italiana.",
+    "especificaciones": {
+      "año": 2001,
+      "motor": "V12 6.5L",
+      "potencia": 640,
+      "aceleracion": 3.4,
+      "velocidadMaxima": 340
+    },
+    "impacto": "Definió la era moderna de Lamborghini. Fue el último V12 puro sin turbo ni hibridación, y el primero con calidad alemana. Su diseño de tijera y su rugido son inconfundibles.",
+    "famosoPor": "El sonido de su V12 a 8000 RPM es considerado por muchos como el mejor motor jamas creado. Apareció en incontables peliculas y videojuegos.",
+    "categoria": "leyenda"
+  },
+  {
+    "id": "lamborghini-aventador",
+    "marca": "Lamborghini",
+    "modelo": "Aventador LP700-4",
+    "pais": "Italia",
+    "imagen": "lambo-aventador.jpg",
+    "historia": "El Aventador reemplazó al Murciélago en 2011, llevando el V12 de Lamborghini a un nuevo nivel. Su nombre viene de un toro de lidia famoso por su bravura en la plaza de Zaragoza.",
+    "motivacion": "Lamborghini necesitaba un buque insignia que estuviera a la altura del Murciélago pero con tecnologia del siglo XXI. Chasis monocasco de fibra de carbono, suspension push-rod y un V12 de 700 CV.",
+    "especificaciones": {
+      "año": 2011,
+      "motor": "V12 6.5L",
+      "potencia": 700,
+      "aceleracion": 2.9,
+      "velocidadMaxima": 350
+    },
+    "impacto": "Estableció el estandar de diseño para toda la decada. Sus puertas de tijera y su perfil agresivo se convirtieron en la imagen misma de un superdeportivo.",
+    "categoria": "clasico"
+  },
+  {
+    "id": "porsche-918",
+    "marca": "Porsche",
+    "modelo": "918 Spyder",
+    "pais": "Alemania",
+    "imagen": "porsche-918.jpg",
+    "historia": "Porsche tardó años en decidirse a fabricar el 918. Era su primer hypercar hibrido, y la presion era enorme: tenia que superar al Carrera GT y competir con el LaFerrari y el P1.",
+    "motivacion": "Porsche queria demostrar que la hibridacion podia mejorar el rendimiento en pista sin perder la esencia de la marca. El 918 nacio como un laboratorio rodante de tecnologia del futuro.",
+    "especificaciones": {
+      "año": 2013,
+      "motor": "V8 4.6L + 2 motores electricos",
+      "potencia": 887,
+      "aceleracion": 2.5,
+      "velocidadMaxima": 345
+    },
+    "impacto": "Estableció el récord de vuelta en Nürburgring para un auto de calle (6:57). Demostró que un hibrido podía ser el auto mas rapido del mundo.",
+    "famosoPor": "Fue el primer auto de produccion en bajar de 7 minutos en Nürburgring. Su techo desmontable y su sonido V8 a 9150 RPM son legendarios.",
+    "categoria": "leyenda"
+  },
+  {
+    "id": "porsche-911-gt3",
+    "marca": "Porsche",
+    "modelo": "911 GT3 RS",
+    "pais": "Alemania",
+    "imagen": "porsche-gt3.jpg",
+    "historia": "El 911 GT3 RS es la expresion maxima del 911 de calle. Nacido en 2003 como un homologacion de pista, cada generacion lleva la ingenieria de Porsche al limite absoluto.",
+    "motivacion": "Porsche queria crear un auto que pudiera ganar en circuito el sabado y llevar a los hijos al colegio el lunes. El GT3 RS es eso: un auto de carreras con patente.",
+    "especificaciones": {
+      "año": 2022,
+      "motor": "Bóxer 6 4.0L Atmosférico",
+      "potencia": 525,
+      "aceleracion": 3.2,
+      "velocidadMaxima": 296
+    },
+    "impacto": "Es el referente absoluto de los autos de pista homologados para calle. Su motor atmosferico que gira a 9000 RPM es una obra de arte en extincion.",
+    "categoria": "clasico"
+  },
+  {
+    "id": "mclaren-p1",
+    "marca": "McLaren",
+    "modelo": "P1",
+    "pais": "Reino Unido",
+    "imagen": "mclaren-p1.jpg",
+    "historia": "McLaren volvia a construir un auto de calle después del F1, y la presion era insostenible. El P1 no solo tenia que ser rapido: tenia que ser el mejor auto de pista jamas creado.",
+    "motivacion": "McLaren aplicó toda su tecnologia de F1 a un auto de calle. El P1 nacio con una obsesion: bajar tiempos en circuito a cualquier costo. Cada pieza existe por razones aerodinamicas.",
+    "especificaciones": {
+      "año": 2013,
+      "motor": "V8 3.8L Twin-Turbo + IPAS electrico",
+      "potencia": 916,
+      "aceleracion": 2.8,
+      "velocidadMaxima": 350
+    },
+    "impacto": "Redefinió lo que significa aerodinamica activa en un auto de calle. Su aleron trasero se eleva 300mm en modo race y genera 600kg de downforce.",
+    "famosoPor": "El DRS activo que toma curvas a velocidades imposibles. Es el auto que mejor traduce la tecnologia de F1 a la calle.",
+    "categoria": "leyenda"
+  },
+  {
+    "id": "mclaren-720s",
+    "marca": "McLaren",
+    "modelo": "720S",
+    "pais": "Reino Unido",
+    "imagen": "mclaren-720s.jpg",
+    "historia": "El 720S llegó en 2017 como el sucesor del 650S, y de un solo golpe dejó obsoleto a casi todo su segmento. McLaren aplicó todo lo aprendido con el P1 en un auto 'accesible'.",
+    "motivacion": "McLaren queria demostrar que un superdeportivo podia ser radicalmente innovador sin dejar de ser usable en el dia a dia. El 720S tiene puertas que se abren hacia arriba y un habitaculo de burbuja.",
+    "especificaciones": {
+      "año": 2017,
+      "motor": "V8 4.0L Twin-Turbo",
+      "potencia": 720,
+      "aceleracion": 2.7,
+      "velocidadMaxima": 341
+    },
+    "impacto": "Reescribió las reglas de los superdeportivos. Su chasis Monocage II es una maravilla de la ingenieria, y su desempeño en pista supera autos que cuestan el doble.",
+    "categoria": "clasico"
+  },
+  {
+    "id": "bugatti-chiron",
+    "marca": "Bugatti",
+    "modelo": "Chiron",
+    "pais": "Francia",
+    "imagen": "bugatti-chiron.jpg",
+    "historia": "Cuando Bugatti dijo que el Veyron era irrepetible, se equivocó. El Chiron nació en 2016 para romper todos los récords que el Veyron había establecido, con 1500 CV de un W16 cuadriturbo.",
+    "motivacion": "Bugatti no buscaba eficiencia ni ecologia. Buscaba el absoluto: el auto mas rapido, mas potente, mas lujoso y mas caro del planeta. Sin concesiones.",
+    "especificaciones": {
+      "año": 2016,
+      "motor": "W16 8.0L Quad-Turbo",
+      "potencia": 1500,
+      "aceleracion": 2.3,
+      "velocidadMaxima": 420
+    },
+    "impacto": "Llevó el concepto de 'exceso' a un nivel casi ridículo. Consume 100 litros cada 100km a máxima velocidad, y sus neumáticos duran 15 minutos a 400 km/h.",
+    "famosoPor": "El unico auto de calle que superó los 300 mph (490 km/h). Es una obra de ingenieria que desafia la logica: un W16 de 8 litros con 4 turbos en un auto de calle.",
+    "categoria": "leyenda"
+  },
+  {
+    "id": "bugatti-veyron",
+    "marca": "Bugatti",
+    "modelo": "Veyron 16.4",
+    "pais": "Francia",
+    "imagen": "bugatti-veyron.jpg",
+    "historia": "El Bugatti Veyron nació como una promesa imposible: 1001 CV, 407 km/h, y un auto que cualquier persona podía manejar. Cuando llegó en 2005, redefinió el significado de 'imposible'.",
+    "motivacion": "Bugatti (bajo Volkswagen) se propuso crear el auto de producción mas rapido del mundo, sin importar el costo. El resultado fue un W16 de 8 litros con 4 turbos que costó 5 millones de euros en desarrollo.",
+    "especificaciones": {
+      "año": 2005,
+      "motor": "W16 8.0L Quad-Turbo",
+      "potencia": 1001,
+      "aceleracion": 2.5,
+      "velocidadMaxima": 407
+    },
+    "impacto": "Demostró que los limites de la ingenieria son solo cuestion de presupuesto. Nadie habia construido nada igual, y probablemente nadie lo vuelva a hacer.",
+    "categoria": "clasico"
+  }
+]
