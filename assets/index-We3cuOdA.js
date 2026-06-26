@@ -684,4 +684,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     background: ${({theme:e})=>e.colors.accent};
     color: ${({theme:e})=>e.colors.bg};
   }
-`,kv=document.getElementById(`root`);if(!kv)throw Error(`Root element not found`);ci.createRoot(kv).render((0,$.jsx)(w.StrictMode,{children:(0,$.jsx)(Mn,{children:(0,$.jsxs)(Ya,{theme:Dv,children:[(0,$.jsx)(Ov,{}),(0,$.jsx)(Ev,{})]})})}));
+`,kv=document.getElementById(`root`);if(!kv)throw Error(`Root element not found`);ci.createRoot(kv).render((0,$.jsx)(w.StrictMode,{children:(0,$.jsx)(Mn,{basename:`/los-mejores-carros-deportivos`,children:(0,$.jsxs)(Ya,{theme:Dv,children:[(0,$.jsx)(Ov,{}),(0,$.jsx)(Ev,{})]})})}));
