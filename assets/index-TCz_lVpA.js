@@ -116,7 +116,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       `},[e,t,n]),handleMouseLeave:(0,w.useCallback)(()=>{let e=r.current;e&&(e.style.transform=`
       perspective(${t}px)
       rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)
-    `)},[t])}}var r_=`/sounds`,i_={"ferrari-laferrari":`ferrari-laferrari.mp3`,"lamborghini-murcielago":`lamborghini-murcielago.mp3`,"porsche-918":`porsche-918.mp3`,"mclaren-p1":`mclaren-p1.mp3`,"bugatti-chiron":`bugatti-chiron.mp3`,"ferrari-f40":`ferrari-laferrari.mp3`,"lamborghini-aventador":`lamborghini-murcielago.mp3`,"porsche-911-gt3":`porsche-918.mp3`,"mclaren-720s":`mclaren-p1.mp3`,"bugatti-veyron":`bugatti-chiron.mp3`};function a_(e){let t=(0,w.useRef)(null);return{play:(0,w.useCallback)(()=>{if(!e||!i_[e])return;let n=i_[e],r=`${r_}/${n}`;if(!t.current||t.current.dataset.src!==r){t.current&&=(t.current.pause(),null);let e=new Audio;e.src=r,e.volume=.5,e.preload=`auto`,e.dataset.src=r,t.current=e}let i=t.current;i.currentTime=0,i.play().catch(e=>{e.name!==`AbortError`&&console.warn(`[sound] ${n}:`,e.message)})},[e]),stop:(0,w.useCallback)(()=>{t.current&&!t.current.paused&&(t.current.pause(),t.current.currentTime=0)},[])}}var o_=P(Lg(Fn))`
+    `)},[t])}}var r_={"ferrari-laferrari":`ferrari-laferrari.mp3`,"lamborghini-murcielago":`lamborghini-murcielago.mp3`,"porsche-918":`porsche-918.mp3`,"mclaren-p1":`mclaren-p1.mp3`,"bugatti-chiron":`bugatti-chiron.mp3`,"ferrari-f40":`ferrari-laferrari.mp3`,"lamborghini-aventador":`lamborghini-murcielago.mp3`,"porsche-911-gt3":`porsche-918.mp3`,"mclaren-720s":`mclaren-p1.mp3`,"bugatti-veyron":`bugatti-chiron.mp3`};function i_(e){let t=(0,w.useRef)(null);return{play:(0,w.useCallback)(()=>{if(!e||!r_[e])return;let n=r_[e],r=`/los-mejores-carros-deportivos/sounds/${n}`;if(!t.current||t.current.dataset.src!==r){t.current&&=(t.current.pause(),null);let e=new Audio;e.src=r,e.volume=.5,e.preload=`auto`,e.dataset.src=r,t.current=e}let i=t.current;i.currentTime=0,i.play().catch(e=>{e.name!==`AbortError`&&console.warn(`[sound] ${n}:`,e.message)})},[e]),stop:(0,w.useCallback)(()=>{t.current&&!t.current.paused&&(t.current.pause(),t.current.currentTime=0)},[])}}var a_=P(Lg(Fn))`
   display: block;
   position: relative;
   border-radius: 1rem;
@@ -132,22 +132,22 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   &:hover {
     border-color: ${({theme:e})=>e.colors.accent};
   }
-`,s_=`https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@v1.0.0`,c_={Ferrari:`ferrari-logo.svg`,Lamborghini:`lamborghini-logo.png`,Porsche:`porsche-logo.svg`,McLaren:`mclaren-logo.svg`,Bugatti:`bugatti-logo.svg`},l_={Ferrari:`linear-gradient(135deg, #ff1a1a, #8b0000)`,Lamborghini:`linear-gradient(135deg, #f5a623, #8b4513)`,Porsche:`linear-gradient(135deg, #1a1a1a, #8b0000)`,McLaren:`linear-gradient(135deg, #ff6600, #1a1a1a)`,Bugatti:`linear-gradient(135deg, #1a1a2e, #8b0000)`},u_=P.div`
+`,o_=`https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@v1.0.0`,s_={Ferrari:`ferrari-logo.svg`,Lamborghini:`lamborghini-logo.png`,Porsche:`porsche-logo.svg`,McLaren:`mclaren-logo.svg`,Bugatti:`bugatti-logo.svg`},c_={Ferrari:`linear-gradient(135deg, #ff1a1a, #8b0000)`,Lamborghini:`linear-gradient(135deg, #f5a623, #8b4513)`,Porsche:`linear-gradient(135deg, #1a1a1a, #8b0000)`,McLaren:`linear-gradient(135deg, #ff6600, #1a1a1a)`,Bugatti:`linear-gradient(135deg, #1a1a2e, #8b0000)`},l_=P.div`
   position: relative;
   width: 100%;
   height: 200px;
-  background: ${({$marca:e})=>l_[e]||`linear-gradient(135deg, #1a1a1a, #333)`};
+  background: ${({$marca:e})=>c_[e]||`linear-gradient(135deg, #1a1a1a, #333)`};
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-`,d_=P.div`
+`,u_=P.div`
   position: absolute;
   inset: 0;
   transform-style: preserve-3d;
   will-change: transform;
   transition: transform 0.15s ease-out;
-`,f_=P.img`
+`,d_=P.img`
   position: absolute;
   inset: 0;
   width: 100%;
@@ -155,15 +155,15 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   object-fit: cover;
   transition: transform 0.4s ease, opacity 0.4s ease;
 
-  ${o_}:hover & {
+  ${a_}:hover & {
     transform: scale(1.05);
   }
-`,p_=P.div`
+`,f_=P.div`
   position: absolute;
   inset: 0;
   background-image: radial-gradient(circle at 25% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
   pointer-events: none;
-`,m_=P.div`
+`,p_=P.div`
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -179,7 +179,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   }
   &::before { transform: translateY(-30px) rotate(2deg); }
   &::after { transform: translateY(30px) rotate(-2deg); }
-`,h_=P.div`
+`,m_=P.div`
   position: relative;
   z-index: 1;
   text-align: center;
@@ -190,7 +190,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   letter-spacing: 0.2em;
   user-select: none;
   mix-blend-mode: overlay;
-`,g_=P.div`
+`,h_=P.div`
   position: absolute;
   inset: 0;
   background: radial-gradient(
@@ -203,12 +203,12 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   pointer-events: none;
   mix-blend-mode: overlay;
 
-  ${o_}:hover & {
+  ${a_}:hover & {
     opacity: 1;
   }
-`,__=P.div`
+`,g_=P.div`
   padding: 1.25rem;
-`,v_=P.span`
+`,__=P.span`
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -217,25 +217,25 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   display: flex;
   align-items: center;
   gap: 0.4rem;
-`,y_=P.img`
+`,v_=P.img`
   height: 0.9rem;
   width: auto;
   opacity: 0.7;
-`,b_=P.h3`
+`,y_=P.h3`
   font-family: ${({theme:e})=>e.fonts.display};
   font-size: 1.125rem;
   margin: 0.35rem 0 0.5rem;
   font-weight: 700;
-`,x_=P.div`
+`,b_=P.div`
   display: flex;
   gap: 1rem;
   font-size: 0.8rem;
   color: ${({theme:e})=>e.colors.textSecondary};
-`,S_=P.span`
+`,x_=P.span`
   display: flex;
   align-items: center;
   gap: 0.3rem;
-`,C_=P.span`
+`,S_=P.span`
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -249,40 +249,40 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   padding: 0.3rem 0.6rem;
   border-radius: 0.25rem;
   z-index: 2;
-`;function w_({car:e,index:t}){let[n,r]=(0,w.useState)({x:`50%`,y:`50%`}),i=n_({maxDeg:6,scale:1.02}),a=a_(e.id);return(0,$.jsxs)(o_,{to:`/auto/${e.id}`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.35,delay:t*.05,ease:`easeOut`},onMouseMove:e=>{let t=e.currentTarget.getBoundingClientRect();r({x:`${(e.clientX-t.left)/t.width*100}%`,y:`${(e.clientY-t.top)/t.height*100}%`}),i.handleMouseMove(e)},onMouseEnter:a.play,onMouseLeave:a.stop,children:[(0,$.jsxs)(u_,{$marca:e.marca,children:[(0,$.jsx)(d_,{ref:i.ref,onMouseLeave:i.handleMouseLeave,children:(0,$.jsx)(f_,{src:`/images/${e.imagen}`,alt:`${e.marca} ${e.modelo}`,loading:`lazy`,onError:e=>{e.target.style.display=`none`}})}),(0,$.jsx)(p_,{}),(0,$.jsx)(m_,{}),(0,$.jsx)(h_,{children:e.marca===`Mercedes-AMG`?`AMG`:e.marca.toUpperCase()}),(0,$.jsx)(g_,{style:{"--mouse-x":n.x,"--mouse-y":n.y}})]}),(0,$.jsxs)(__,{children:[(0,$.jsxs)(v_,{children:[c_[e.marca]&&(0,$.jsx)(y_,{src:`${s_}/${c_[e.marca]}`,alt:e.marca}),e.marca]}),(0,$.jsx)(b_,{children:e.modelo}),(0,$.jsxs)(x_,{children:[(0,$.jsxs)(S_,{children:[`⚡ `,e.especificaciones.potencia,` HP`]}),(0,$.jsxs)(S_,{children:[`⏱ `,e.especificaciones.aceleracion,`s`]}),(0,$.jsxs)(S_,{children:[`🚀 `,e.especificaciones.velocidadMaxima,` km/h`]})]})]}),e.categoria&&(0,$.jsx)(C_,{$tipo:e.categoria,children:e.categoria})]})}var T_=JSON.parse(`[{"id":"ferrari-laferrari","marca":"Ferrari","modelo":"LaFerrari","pais":"Italia","imagen":"ferrari-laferrari.jpg","historia":"Nacido en 2013 como el sucesor del Enzo, el LaFerrari fue el primer hypercar híbrido de Maranello. Ferocidad pura con la elegancia del cavallino rampante.","motivacion":"Ferrari queria demostrar que la hibridacion no era solo para ahorrar combustible, sino para llevar el rendimiento al extremo. Nacio como el auto de calle mas avanzado jamas construido por la marca.","especificaciones":{"año":2013,"motor":"V12 6.3L + HY-KERS electrico","potencia":963,"aceleracion":2.6,"velocidadMaxima":350},"impacto":"Forma parte de la 'Santísima Trinidad' junto al McLaren P1 y el Porsche 918. Demostró que un Ferrari híbrido podía ser más salvaje que uno puramente combustión.","famosoPor":"Es la expresion maxima de Ferrari en su epoca: un V12 atmosferico asistido por electricidad que entrega casi 1000 CV. Solo 499 unidades, todas vendidas antes de fabricarse.","categoria":"leyenda"},{"id":"ferrari-f40","marca":"Ferrari","modelo":"F40","pais":"Italia","imagen":"ferrari-f40.jpg","historia":"El Ferrari F40 nacio en 1987 como el ultimo auto supervisado por Enzo Ferrari antes de su muerte. Fue construido para celebrar el 40 aniversario de la marca y se convirtio en el auto de calle mas rapido de su epoca.","motivacion":"Ferrari queria crear el auto definitivo, sin concesiones: sin ABS, sin direccion asistida, sin electronica. Solo un V8 biturbo con chasis de kevlar y fibra de carbono. Pura bestia.","especificaciones":{"año":1987,"motor":"V8 2.9L Biturbo","potencia":478,"aceleracion":4.0,"velocidadMaxima":324},"impacto":"Definió la era de los superdeportivos modernos. Fue el primer auto de serie en superar los 320 km/h y marcó a toda una generacion de entusiastas.","categoria":"clasico"},{"id":"lamborghini-murcielago","marca":"Lamborghini","modelo":"Murciélago LP640","pais":"Italia","imagen":"lambo-murcielago.jpg","historia":"Nacido en 2001 como el reemplazo del Diablo, el Murciélago fue el primer Lamborghini bajo el paraguas de Audi. Su nombre honra al toro de la famosa corrida de 1879 que sobrevivió a 24 estocadas.","motivacion":"Lamborghini necesitaba un sucesor del Diablo que mantuviera la esencia V12 pero con la calidad de construccion que Audi exigia. No fue facil: la ingenieria alemana chocaba con el alma italiana.","especificaciones":{"año":2001,"motor":"V12 6.5L","potencia":640,"aceleracion":3.4,"velocidadMaxima":340},"impacto":"Definió la era moderna de Lamborghini. Fue el último V12 puro sin turbo ni hibridación, y el primero con calidad alemana. Su diseño de tijera y su rugido son inconfundibles.","famosoPor":"El sonido de su V12 a 8000 RPM es considerado por muchos como el mejor motor jamas creado. Apareció en incontables peliculas y videojuegos.","categoria":"leyenda"},{"id":"lamborghini-aventador","marca":"Lamborghini","modelo":"Aventador LP700-4","pais":"Italia","imagen":"lambo-aventador.jpg","historia":"El Aventador reemplazó al Murciélago en 2011, llevando el V12 de Lamborghini a un nuevo nivel. Su nombre viene de un toro de lidia famoso por su bravura en la plaza de Zaragoza.","motivacion":"Lamborghini necesitaba un buque insignia que estuviera a la altura del Murciélago pero con tecnologia del siglo XXI. Chasis monocasco de fibra de carbono, suspension push-rod y un V12 de 700 CV.","especificaciones":{"año":2011,"motor":"V12 6.5L","potencia":700,"aceleracion":2.9,"velocidadMaxima":350},"impacto":"Estableció el estandar de diseño para toda la decada. Sus puertas de tijera y su perfil agresivo se convirtieron en la imagen misma de un superdeportivo.","categoria":"clasico"},{"id":"porsche-918","marca":"Porsche","modelo":"918 Spyder","pais":"Alemania","imagen":"porsche-918.jpg","historia":"Porsche tardó años en decidirse a fabricar el 918. Era su primer hypercar hibrido, y la presion era enorme: tenia que superar al Carrera GT y competir con el LaFerrari y el P1.","motivacion":"Porsche queria demostrar que la hibridacion podia mejorar el rendimiento en pista sin perder la esencia de la marca. El 918 nacio como un laboratorio rodante de tecnologia del futuro.","especificaciones":{"año":2013,"motor":"V8 4.6L + 2 motores electricos","potencia":887,"aceleracion":2.5,"velocidadMaxima":345},"impacto":"Estableció el récord de vuelta en Nürburgring para un auto de calle (6:57). Demostró que un hibrido podía ser el auto mas rapido del mundo.","famosoPor":"Fue el primer auto de produccion en bajar de 7 minutos en Nürburgring. Su techo desmontable y su sonido V8 a 9150 RPM son legendarios.","categoria":"leyenda"},{"id":"porsche-911-gt3","marca":"Porsche","modelo":"911 GT3 RS","pais":"Alemania","imagen":"porsche-gt3.jpg","historia":"El 911 GT3 RS es la expresion maxima del 911 de calle. Nacido en 2003 como un homologacion de pista, cada generacion lleva la ingenieria de Porsche al limite absoluto.","motivacion":"Porsche queria crear un auto que pudiera ganar en circuito el sabado y llevar a los hijos al colegio el lunes. El GT3 RS es eso: un auto de carreras con patente.","especificaciones":{"año":2022,"motor":"Bóxer 6 4.0L Atmosférico","potencia":525,"aceleracion":3.2,"velocidadMaxima":296},"impacto":"Es el referente absoluto de los autos de pista homologados para calle. Su motor atmosferico que gira a 9000 RPM es una obra de arte en extincion.","categoria":"clasico"},{"id":"mclaren-p1","marca":"McLaren","modelo":"P1","pais":"Reino Unido","imagen":"mclaren-p1.jpg","historia":"McLaren volvia a construir un auto de calle después del F1, y la presion era insostenible. El P1 no solo tenia que ser rapido: tenia que ser el mejor auto de pista jamas creado.","motivacion":"McLaren aplicó toda su tecnologia de F1 a un auto de calle. El P1 nacio con una obsesion: bajar tiempos en circuito a cualquier costo. Cada pieza existe por razones aerodinamicas.","especificaciones":{"año":2013,"motor":"V8 3.8L Twin-Turbo + IPAS electrico","potencia":916,"aceleracion":2.8,"velocidadMaxima":350},"impacto":"Redefinió lo que significa aerodinamica activa en un auto de calle. Su aleron trasero se eleva 300mm en modo race y genera 600kg de downforce.","famosoPor":"El DRS activo que toma curvas a velocidades imposibles. Es el auto que mejor traduce la tecnologia de F1 a la calle.","categoria":"leyenda"},{"id":"mclaren-720s","marca":"McLaren","modelo":"720S","pais":"Reino Unido","imagen":"mclaren-720s.jpg","historia":"El 720S llegó en 2017 como el sucesor del 650S, y de un solo golpe dejó obsoleto a casi todo su segmento. McLaren aplicó todo lo aprendido con el P1 en un auto 'accesible'.","motivacion":"McLaren queria demostrar que un superdeportivo podia ser radicalmente innovador sin dejar de ser usable en el dia a dia. El 720S tiene puertas que se abren hacia arriba y un habitaculo de burbuja.","especificaciones":{"año":2017,"motor":"V8 4.0L Twin-Turbo","potencia":720,"aceleracion":2.7,"velocidadMaxima":341},"impacto":"Reescribió las reglas de los superdeportivos. Su chasis Monocage II es una maravilla de la ingenieria, y su desempeño en pista supera autos que cuestan el doble.","categoria":"clasico"},{"id":"bugatti-chiron","marca":"Bugatti","modelo":"Chiron","pais":"Francia","imagen":"bugatti-chiron.jpg","historia":"Cuando Bugatti dijo que el Veyron era irrepetible, se equivocó. El Chiron nació en 2016 para romper todos los récords que el Veyron había establecido, con 1500 CV de un W16 cuadriturbo.","motivacion":"Bugatti no buscaba eficiencia ni ecologia. Buscaba el absoluto: el auto mas rapido, mas potente, mas lujoso y mas caro del planeta. Sin concesiones.","especificaciones":{"año":2016,"motor":"W16 8.0L Quad-Turbo","potencia":1500,"aceleracion":2.3,"velocidadMaxima":420},"impacto":"Llevó el concepto de 'exceso' a un nivel casi ridículo. Consume 100 litros cada 100km a máxima velocidad, y sus neumáticos duran 15 minutos a 400 km/h.","famosoPor":"El unico auto de calle que superó los 300 mph (490 km/h). Es una obra de ingenieria que desafia la logica: un W16 de 8 litros con 4 turbos en un auto de calle.","categoria":"leyenda"},{"id":"bugatti-veyron","marca":"Bugatti","modelo":"Veyron 16.4","pais":"Francia","imagen":"bugatti-veyron.jpg","historia":"El Bugatti Veyron nació como una promesa imposible: 1001 CV, 407 km/h, y un auto que cualquier persona podía manejar. Cuando llegó en 2005, redefinió el significado de 'imposible'.","motivacion":"Bugatti (bajo Volkswagen) se propuso crear el auto de producción mas rapido del mundo, sin importar el costo. El resultado fue un W16 de 8 litros con 4 turbos que costó 5 millones de euros en desarrollo.","especificaciones":{"año":2005,"motor":"W16 8.0L Quad-Turbo","potencia":1001,"aceleracion":2.5,"velocidadMaxima":407},"impacto":"Demostró que los limites de la ingenieria son solo cuestion de presupuesto. Nadie habia construido nada igual, y probablemente nadie lo vuelva a hacer.","categoria":"clasico"}]`),E_=P.section`
+`;function C_({car:e,index:t}){let[n,r]=(0,w.useState)({x:`50%`,y:`50%`}),i=n_({maxDeg:6,scale:1.02}),a=i_(e.id);return(0,$.jsxs)(a_,{to:`/auto/${e.id}`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.35,delay:t*.05,ease:`easeOut`},onMouseMove:e=>{let t=e.currentTarget.getBoundingClientRect();r({x:`${(e.clientX-t.left)/t.width*100}%`,y:`${(e.clientY-t.top)/t.height*100}%`}),i.handleMouseMove(e)},onMouseEnter:a.play,onMouseLeave:a.stop,children:[(0,$.jsxs)(l_,{$marca:e.marca,children:[(0,$.jsx)(u_,{ref:i.ref,onMouseLeave:i.handleMouseLeave,children:(0,$.jsx)(d_,{src:`/los-mejores-carros-deportivos/images/${e.imagen}`,alt:`${e.marca} ${e.modelo}`,loading:`lazy`,onError:e=>{e.target.style.display=`none`}})}),(0,$.jsx)(f_,{}),(0,$.jsx)(p_,{}),(0,$.jsx)(m_,{children:e.marca===`Mercedes-AMG`?`AMG`:e.marca.toUpperCase()}),(0,$.jsx)(h_,{style:{"--mouse-x":n.x,"--mouse-y":n.y}})]}),(0,$.jsxs)(g_,{children:[(0,$.jsxs)(__,{children:[s_[e.marca]&&(0,$.jsx)(v_,{src:`${o_}/${s_[e.marca]}`,alt:e.marca}),e.marca]}),(0,$.jsx)(y_,{children:e.modelo}),(0,$.jsxs)(b_,{children:[(0,$.jsxs)(x_,{children:[`⚡ `,e.especificaciones.potencia,` HP`]}),(0,$.jsxs)(x_,{children:[`⏱ `,e.especificaciones.aceleracion,`s`]}),(0,$.jsxs)(x_,{children:[`🚀 `,e.especificaciones.velocidadMaxima,` km/h`]})]})]}),e.categoria&&(0,$.jsx)(S_,{$tipo:e.categoria,children:e.categoria})]})}var w_=JSON.parse(`[{"id":"ferrari-laferrari","marca":"Ferrari","modelo":"LaFerrari","pais":"Italia","imagen":"ferrari-laferrari.jpg","historia":"Nacido en 2013 como el sucesor del Enzo, el LaFerrari fue el primer hypercar híbrido de Maranello. Ferocidad pura con la elegancia del cavallino rampante.","motivacion":"Ferrari queria demostrar que la hibridacion no era solo para ahorrar combustible, sino para llevar el rendimiento al extremo. Nacio como el auto de calle mas avanzado jamas construido por la marca.","especificaciones":{"año":2013,"motor":"V12 6.3L + HY-KERS electrico","potencia":963,"aceleracion":2.6,"velocidadMaxima":350},"impacto":"Forma parte de la 'Santísima Trinidad' junto al McLaren P1 y el Porsche 918. Demostró que un Ferrari híbrido podía ser más salvaje que uno puramente combustión.","famosoPor":"Es la expresion maxima de Ferrari en su epoca: un V12 atmosferico asistido por electricidad que entrega casi 1000 CV. Solo 499 unidades, todas vendidas antes de fabricarse.","categoria":"leyenda"},{"id":"ferrari-f40","marca":"Ferrari","modelo":"F40","pais":"Italia","imagen":"ferrari-f40.jpg","historia":"El Ferrari F40 nacio en 1987 como el ultimo auto supervisado por Enzo Ferrari antes de su muerte. Fue construido para celebrar el 40 aniversario de la marca y se convirtio en el auto de calle mas rapido de su epoca.","motivacion":"Ferrari queria crear el auto definitivo, sin concesiones: sin ABS, sin direccion asistida, sin electronica. Solo un V8 biturbo con chasis de kevlar y fibra de carbono. Pura bestia.","especificaciones":{"año":1987,"motor":"V8 2.9L Biturbo","potencia":478,"aceleracion":4.0,"velocidadMaxima":324},"impacto":"Definió la era de los superdeportivos modernos. Fue el primer auto de serie en superar los 320 km/h y marcó a toda una generacion de entusiastas.","categoria":"clasico"},{"id":"lamborghini-murcielago","marca":"Lamborghini","modelo":"Murciélago LP640","pais":"Italia","imagen":"lambo-murcielago.jpg","historia":"Nacido en 2001 como el reemplazo del Diablo, el Murciélago fue el primer Lamborghini bajo el paraguas de Audi. Su nombre honra al toro de la famosa corrida de 1879 que sobrevivió a 24 estocadas.","motivacion":"Lamborghini necesitaba un sucesor del Diablo que mantuviera la esencia V12 pero con la calidad de construccion que Audi exigia. No fue facil: la ingenieria alemana chocaba con el alma italiana.","especificaciones":{"año":2001,"motor":"V12 6.5L","potencia":640,"aceleracion":3.4,"velocidadMaxima":340},"impacto":"Definió la era moderna de Lamborghini. Fue el último V12 puro sin turbo ni hibridación, y el primero con calidad alemana. Su diseño de tijera y su rugido son inconfundibles.","famosoPor":"El sonido de su V12 a 8000 RPM es considerado por muchos como el mejor motor jamas creado. Apareció en incontables peliculas y videojuegos.","categoria":"leyenda"},{"id":"lamborghini-aventador","marca":"Lamborghini","modelo":"Aventador LP700-4","pais":"Italia","imagen":"lambo-aventador.jpg","historia":"El Aventador reemplazó al Murciélago en 2011, llevando el V12 de Lamborghini a un nuevo nivel. Su nombre viene de un toro de lidia famoso por su bravura en la plaza de Zaragoza.","motivacion":"Lamborghini necesitaba un buque insignia que estuviera a la altura del Murciélago pero con tecnologia del siglo XXI. Chasis monocasco de fibra de carbono, suspension push-rod y un V12 de 700 CV.","especificaciones":{"año":2011,"motor":"V12 6.5L","potencia":700,"aceleracion":2.9,"velocidadMaxima":350},"impacto":"Estableció el estandar de diseño para toda la decada. Sus puertas de tijera y su perfil agresivo se convirtieron en la imagen misma de un superdeportivo.","categoria":"clasico"},{"id":"porsche-918","marca":"Porsche","modelo":"918 Spyder","pais":"Alemania","imagen":"porsche-918.jpg","historia":"Porsche tardó años en decidirse a fabricar el 918. Era su primer hypercar hibrido, y la presion era enorme: tenia que superar al Carrera GT y competir con el LaFerrari y el P1.","motivacion":"Porsche queria demostrar que la hibridacion podia mejorar el rendimiento en pista sin perder la esencia de la marca. El 918 nacio como un laboratorio rodante de tecnologia del futuro.","especificaciones":{"año":2013,"motor":"V8 4.6L + 2 motores electricos","potencia":887,"aceleracion":2.5,"velocidadMaxima":345},"impacto":"Estableció el récord de vuelta en Nürburgring para un auto de calle (6:57). Demostró que un hibrido podía ser el auto mas rapido del mundo.","famosoPor":"Fue el primer auto de produccion en bajar de 7 minutos en Nürburgring. Su techo desmontable y su sonido V8 a 9150 RPM son legendarios.","categoria":"leyenda"},{"id":"porsche-911-gt3","marca":"Porsche","modelo":"911 GT3 RS","pais":"Alemania","imagen":"porsche-gt3.jpg","historia":"El 911 GT3 RS es la expresion maxima del 911 de calle. Nacido en 2003 como un homologacion de pista, cada generacion lleva la ingenieria de Porsche al limite absoluto.","motivacion":"Porsche queria crear un auto que pudiera ganar en circuito el sabado y llevar a los hijos al colegio el lunes. El GT3 RS es eso: un auto de carreras con patente.","especificaciones":{"año":2022,"motor":"Bóxer 6 4.0L Atmosférico","potencia":525,"aceleracion":3.2,"velocidadMaxima":296},"impacto":"Es el referente absoluto de los autos de pista homologados para calle. Su motor atmosferico que gira a 9000 RPM es una obra de arte en extincion.","categoria":"clasico"},{"id":"mclaren-p1","marca":"McLaren","modelo":"P1","pais":"Reino Unido","imagen":"mclaren-p1.jpg","historia":"McLaren volvia a construir un auto de calle después del F1, y la presion era insostenible. El P1 no solo tenia que ser rapido: tenia que ser el mejor auto de pista jamas creado.","motivacion":"McLaren aplicó toda su tecnologia de F1 a un auto de calle. El P1 nacio con una obsesion: bajar tiempos en circuito a cualquier costo. Cada pieza existe por razones aerodinamicas.","especificaciones":{"año":2013,"motor":"V8 3.8L Twin-Turbo + IPAS electrico","potencia":916,"aceleracion":2.8,"velocidadMaxima":350},"impacto":"Redefinió lo que significa aerodinamica activa en un auto de calle. Su aleron trasero se eleva 300mm en modo race y genera 600kg de downforce.","famosoPor":"El DRS activo que toma curvas a velocidades imposibles. Es el auto que mejor traduce la tecnologia de F1 a la calle.","categoria":"leyenda"},{"id":"mclaren-720s","marca":"McLaren","modelo":"720S","pais":"Reino Unido","imagen":"mclaren-720s.jpg","historia":"El 720S llegó en 2017 como el sucesor del 650S, y de un solo golpe dejó obsoleto a casi todo su segmento. McLaren aplicó todo lo aprendido con el P1 en un auto 'accesible'.","motivacion":"McLaren queria demostrar que un superdeportivo podia ser radicalmente innovador sin dejar de ser usable en el dia a dia. El 720S tiene puertas que se abren hacia arriba y un habitaculo de burbuja.","especificaciones":{"año":2017,"motor":"V8 4.0L Twin-Turbo","potencia":720,"aceleracion":2.7,"velocidadMaxima":341},"impacto":"Reescribió las reglas de los superdeportivos. Su chasis Monocage II es una maravilla de la ingenieria, y su desempeño en pista supera autos que cuestan el doble.","categoria":"clasico"},{"id":"bugatti-chiron","marca":"Bugatti","modelo":"Chiron","pais":"Francia","imagen":"bugatti-chiron.jpg","historia":"Cuando Bugatti dijo que el Veyron era irrepetible, se equivocó. El Chiron nació en 2016 para romper todos los récords que el Veyron había establecido, con 1500 CV de un W16 cuadriturbo.","motivacion":"Bugatti no buscaba eficiencia ni ecologia. Buscaba el absoluto: el auto mas rapido, mas potente, mas lujoso y mas caro del planeta. Sin concesiones.","especificaciones":{"año":2016,"motor":"W16 8.0L Quad-Turbo","potencia":1500,"aceleracion":2.3,"velocidadMaxima":420},"impacto":"Llevó el concepto de 'exceso' a un nivel casi ridículo. Consume 100 litros cada 100km a máxima velocidad, y sus neumáticos duran 15 minutos a 400 km/h.","famosoPor":"El unico auto de calle que superó los 300 mph (490 km/h). Es una obra de ingenieria que desafia la logica: un W16 de 8 litros con 4 turbos en un auto de calle.","categoria":"leyenda"},{"id":"bugatti-veyron","marca":"Bugatti","modelo":"Veyron 16.4","pais":"Francia","imagen":"bugatti-veyron.jpg","historia":"El Bugatti Veyron nació como una promesa imposible: 1001 CV, 407 km/h, y un auto que cualquier persona podía manejar. Cuando llegó en 2005, redefinió el significado de 'imposible'.","motivacion":"Bugatti (bajo Volkswagen) se propuso crear el auto de producción mas rapido del mundo, sin importar el costo. El resultado fue un W16 de 8 litros con 4 turbos que costó 5 millones de euros en desarrollo.","especificaciones":{"año":2005,"motor":"W16 8.0L Quad-Turbo","potencia":1001,"aceleracion":2.5,"velocidadMaxima":407},"impacto":"Demostró que los limites de la ingenieria son solo cuestion de presupuesto. Nadie habia construido nada igual, y probablemente nadie lo vuelva a hacer.","categoria":"clasico"}]`),T_=P.section`
   padding: 4rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
   contain: layout style;
   content-visibility: auto;
-`,D_=P(Lg.h2)`
+`,E_=P(Lg.h2)`
   font-family: ${({theme:e})=>e.fonts.display};
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
-`,O_=P(Lg.p)`
+`,D_=P(Lg.p)`
   color: ${({theme:e})=>e.colors.textSecondary};
   text-align: center;
   margin-bottom: 3rem;
   font-size: 0.95rem;
-`,k_=P.div`
+`,O_=P.div`
   width: 60px;
   height: 2px;
   background: ${({theme:e})=>e.colors.accent};
   margin: 1rem auto 2rem;
-`,A_=P.div`
+`,k_=P.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   padding: 1rem 0;
-`,j_=P(Lg.div)`
+`,A_=P(Lg.div)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 3rem;
-`,M_=P.button`
+`,j_=P.button`
   background: ${({$active:e,theme:t})=>e?t.colors.accent:`transparent`};
   color: ${({$active:e,theme:t})=>e?`#fff`:t.colors.textSecondary};
   border: 1px solid ${({$active:e,theme:t})=>e?t.colors.accent:t.colors.border};
@@ -297,10 +297,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     border-color: ${({theme:e})=>e.colors.accent};
     color: ${({theme:e})=>e.colors.text};
   }
-`,N_=[`Todos`,`Italia`,`Alemania`,`Reino Unido`,`Francia`];function P_(){let[e,t]=(0,w.useState)(`Todos`),n=T_.filter(e=>e.categoria===`leyenda`),r=T_.filter(e=>e.categoria===`clasico`),i=e===`Todos`?r:r.filter(t=>t.pais===e);return(0,$.jsxs)($.Fragment,{children:[(0,$.jsx)(t_,{}),(0,$.jsxs)(E_,{children:[(0,$.jsx)(D_,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.4},children:`⭐ Leyendas`}),(0,$.jsx)(O_,{initial:{opacity:0},animate:{opacity:1},transition:{duration:.4,delay:.1},children:`Los hypercars más icónicos que marcaron la historia`}),(0,$.jsx)(k_,{}),(0,$.jsx)(A_,{children:n.map((e,t)=>(0,$.jsx)(w_,{car:e,index:t},e.id))})]}),(0,$.jsxs)(E_,{children:[(0,$.jsx)(D_,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.4},children:`🏎️ Clásicos Modernos`}),(0,$.jsx)(O_,{initial:{opacity:0},animate:{opacity:1},transition:{duration:.4,delay:.1},children:`Los segundos mejores — igual de impresionantes`}),(0,$.jsx)(k_,{}),(0,$.jsx)(j_,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{duration:.35},children:N_.map(n=>(0,$.jsx)(M_,{$active:e===n,onClick:()=>t(n),children:n},n))}),(0,$.jsx)(A_,{children:i.map((e,t)=>(0,$.jsx)(w_,{car:e,index:t},e.id))})]})]})}var F_=`https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@v1.0.0`,I_={Ferrari:`ferrari-logo.svg`,Lamborghini:`lamborghini-logo.png`,Porsche:`porsche-logo.svg`,McLaren:`mclaren-logo.svg`,Bugatti:`bugatti-logo.svg`},L_=uo`
+`,M_=[`Todos`,`Italia`,`Alemania`,`Reino Unido`,`Francia`];function N_(){let[e,t]=(0,w.useState)(`Todos`),n=w_.filter(e=>e.categoria===`leyenda`),r=w_.filter(e=>e.categoria===`clasico`),i=e===`Todos`?r:r.filter(t=>t.pais===e);return(0,$.jsxs)($.Fragment,{children:[(0,$.jsx)(t_,{}),(0,$.jsxs)(T_,{children:[(0,$.jsx)(E_,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.4},children:`⭐ Leyendas`}),(0,$.jsx)(D_,{initial:{opacity:0},animate:{opacity:1},transition:{duration:.4,delay:.1},children:`Los hypercars más icónicos que marcaron la historia`}),(0,$.jsx)(O_,{}),(0,$.jsx)(k_,{children:n.map((e,t)=>(0,$.jsx)(C_,{car:e,index:t},e.id))})]}),(0,$.jsxs)(T_,{children:[(0,$.jsx)(E_,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.4},children:`🏎️ Clásicos Modernos`}),(0,$.jsx)(D_,{initial:{opacity:0},animate:{opacity:1},transition:{duration:.4,delay:.1},children:`Los segundos mejores — igual de impresionantes`}),(0,$.jsx)(O_,{}),(0,$.jsx)(A_,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{duration:.35},children:M_.map(n=>(0,$.jsx)(j_,{$active:e===n,onClick:()=>t(n),children:n},n))}),(0,$.jsx)(k_,{children:i.map((e,t)=>(0,$.jsx)(C_,{car:e,index:t},e.id))})]})]})}var P_=`https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@v1.0.0`,F_={Ferrari:`ferrari-logo.svg`,Lamborghini:`lamborghini-logo.png`,Porsche:`porsche-logo.svg`,McLaren:`mclaren-logo.svg`,Bugatti:`bugatti-logo.svg`},I_=uo`
   from { transform: rotateY(0deg); }
   to   { transform: rotateY(360deg); }
-`,R_=uo`
+`,L_=uo`
   0%   { opacity: 0; transform: translateX(-100%) skewX(-15deg); }
   10%  { opacity: 0.6; }
   30%  { opacity: 0.1; }
@@ -308,13 +308,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   70%  { opacity: 0.1; }
   90%  { opacity: 0.6; }
   100% { opacity: 0; transform: translateX(200%) skewX(-15deg); }
-`,z_=P.div`
+`,R_=P.div`
   position: relative;
   width: 100%;
   height: 100%;
   perspective: 1200px;
   overflow: visible;
-`,B_=P.div`
+`,z_=P.div`
   width: 100%;
   height: 100%;
   position: relative;
@@ -325,10 +325,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   will-change: transform;
 
   /* Continuous turntable rotation on hover */
-  ${z_}:hover & {
-    animation: ${L_} ${({$active:e})=>e?`6s`:`0s`} linear infinite;
+  ${R_}:hover & {
+    animation: ${I_} ${({$active:e})=>e?`6s`:`0s`} linear infinite;
   }
-`,V_=P.img`
+`,B_=P.img`
   position: absolute;
   inset: 0;
   width: 100%;
@@ -336,7 +336,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   object-fit: cover;
   border-radius: 1.5rem;
   backface-visibility: hidden;
-`,H_=P.div`
+`,V_=P.div`
   position: absolute;
   inset: 0;
   border-radius: 1.5rem;
@@ -346,13 +346,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(26,26,26,0.6), rgba(0,0,0,0.3));
-`,U_=P.img`
+`,H_=P.img`
   width: 60%;
   height: 60%;
   object-fit: contain;
   opacity: 0.7;
   ${({$isPng:e})=>e?`filter: brightness(10) saturate(0);`:``}
-`,W_=P.div`
+`,U_=P.div`
   position: absolute;
   inset: 0;
   border-radius: 1.5rem;
@@ -369,10 +369,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   mix-blend-mode: overlay;
   backface-visibility: hidden;
 
-  ${z_}:hover & {
-    animation: ${R_} 3s ease-in-out infinite;
+  ${R_}:hover & {
+    animation: ${L_} 3s ease-in-out infinite;
   }
-`,G_=P.div`
+`,W_=P.div`
   position: absolute;
   inset: 0;
   border-radius: 1.5rem;
@@ -384,7 +384,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   );
   pointer-events: none;
   backface-visibility: hidden;
-`,K_=P.div`
+`,G_=P.div`
   position: absolute;
   bottom: -20px;
   left: 10%;
@@ -396,7 +396,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   transform-origin: bottom center;
   pointer-events: none;
   ${({$active:e})=>e?`animation: shadow-pulse 3s ease-in-out infinite;`:``}
-`;function q_({src:e,alt:t,marca:n,onHover:r,onLeave:i}){let[a,o]=(0,w.useState)(!1),[s,c]=(0,w.useState)({x:0,y:0}),l=I_[n],u=l?.endsWith(`.png`);return(0,$.jsxs)(z_,{onMouseMove:(0,w.useCallback)(e=>{let t=e.currentTarget.getBoundingClientRect();c({x:((e.clientX-t.left)/t.width-.5)*10,y:((e.clientY-t.top)/t.height-.5)*-10})},[]),onMouseEnter:()=>{o(!0),r?.()},onMouseLeave:(0,w.useCallback)(()=>{c({x:0,y:0}),o(!1),i?.()},[i]),children:[(0,$.jsxs)(B_,{$active:a,$mouseX:s.x,$mouseY:s.y,children:[(0,$.jsx)(V_,{src:e,alt:t,onError:e=>{e.target.style.display=`none`}}),l&&(0,$.jsx)(H_,{children:(0,$.jsx)(U_,{src:`${F_}/${l}`,alt:n,$isPng:u,draggable:!1})}),(0,$.jsx)(W_,{}),(0,$.jsx)(G_,{})]}),(0,$.jsx)(K_,{$active:a})]})}var J_=P.section`
+`;function K_({src:e,alt:t,marca:n,onHover:r,onLeave:i}){let[a,o]=(0,w.useState)(!1),[s,c]=(0,w.useState)({x:0,y:0}),l=F_[n],u=l?.endsWith(`.png`);return(0,$.jsxs)(R_,{onMouseMove:(0,w.useCallback)(e=>{let t=e.currentTarget.getBoundingClientRect();c({x:((e.clientX-t.left)/t.width-.5)*10,y:((e.clientY-t.top)/t.height-.5)*-10})},[]),onMouseEnter:()=>{o(!0),r?.()},onMouseLeave:(0,w.useCallback)(()=>{c({x:0,y:0}),o(!1),i?.()},[i]),children:[(0,$.jsxs)(z_,{$active:a,$mouseX:s.x,$mouseY:s.y,children:[(0,$.jsx)(B_,{src:e,alt:t,onError:e=>{e.target.style.display=`none`}}),l&&(0,$.jsx)(V_,{children:(0,$.jsx)(H_,{src:`${P_}/${l}`,alt:n,$isPng:u,draggable:!1})}),(0,$.jsx)(U_,{}),(0,$.jsx)(W_,{})]}),(0,$.jsx)(G_,{$active:a})]})}var q_=P.section`
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -405,7 +405,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   justify-content: center;
   padding: 6rem 2rem;
   overflow: hidden;
-`,Y_=P.div`
+`,J_=P.div`
   position: absolute;
   width: 80vw;
   height: 60vw;
@@ -414,7 +414,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, rgba(230, 57, 70, 0.06) 0%, transparent 70%);
   pointer-events: none;
-`,X_=P.div`
+`,Y_=P.div`
   position: relative;
   z-index: 1;
   width: 100%;
@@ -428,13 +428,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-`,Z_=`https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@v1.0.0`,Q_={Ferrari:`ferrari-logo.svg`,Lamborghini:`lamborghini-logo.png`,Porsche:`porsche-logo.svg`,McLaren:`mclaren-logo.svg`,Bugatti:`bugatti-logo.svg`},$_={Ferrari:`linear-gradient(135deg, #ff1a1a 0%, #8b0000 40%, #1a0000 100%)`,Lamborghini:`linear-gradient(135deg, #f5a623 0%, #8b4513 40%, #1a0a00 100%)`,Porsche:`linear-gradient(135deg, #1a1a1a 0%, #8b0000 40%, #1a0000 100%)`,McLaren:`linear-gradient(135deg, #ff6600 0%, #1a1a1a 40%, #0a0a0a 100%)`,Bugatti:`linear-gradient(135deg, #1a1a2e 0%, #8b0000 40%, #1a0000 100%)`},ev=P(Lg.div)`
+`,X_=`https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@v1.0.0`,Z_={Ferrari:`ferrari-logo.svg`,Lamborghini:`lamborghini-logo.png`,Porsche:`porsche-logo.svg`,McLaren:`mclaren-logo.svg`,Bugatti:`bugatti-logo.svg`},Q_={Ferrari:`linear-gradient(135deg, #ff1a1a 0%, #8b0000 40%, #1a0000 100%)`,Lamborghini:`linear-gradient(135deg, #f5a623 0%, #8b4513 40%, #1a0a00 100%)`,Porsche:`linear-gradient(135deg, #1a1a1a 0%, #8b0000 40%, #1a0000 100%)`,McLaren:`linear-gradient(135deg, #ff6600 0%, #1a1a1a 40%, #0a0a0a 100%)`,Bugatti:`linear-gradient(135deg, #1a1a2e 0%, #8b0000 40%, #1a0000 100%)`},$_=P(Lg.div)`
   position: relative;
   perspective: 1000px;
-`,tv=P.div`
+`,ev=P.div`
   width: 100%;
   aspect-ratio: 4/3;
-  background: ${({$marca:e})=>$_[e]||`linear-gradient(135deg, #1a1a1a, #333)`};
+  background: ${({$marca:e})=>Q_[e]||`linear-gradient(135deg, #1a1a1a, #333)`};
   border-radius: 1.5rem;
   overflow: hidden;
   transform-style: preserve-3d;
@@ -445,7 +445,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   position: relative;
   transition: transform 0.15s ease-out;
   will-change: transform;
-`,nv=P(Lg.div)`
+`,tv=P(Lg.div)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -458,11 +458,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   pointer-events: none;
   white-space: nowrap;
   letter-spacing: 0.1em;
-`,rv=P(Lg.div)`
+`,nv=P(Lg.div)`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`,iv=P(Fn)`
+`,rv=P(Fn)`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -474,7 +474,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   &:hover {
     color: ${({theme:e})=>e.colors.accent};
   }
-`,av=P.span`
+`,iv=P.span`
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -483,11 +483,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   display: flex;
   align-items: center;
   gap: 0.6rem;
-`,ov=P.img`
+`,av=P.img`
   height: 1.2rem;
   width: auto;
   opacity: 0.6;
-`,sv=P.span`
+`,ov=P.span`
   display: inline-block;
   font-size: 0.6rem;
   text-transform: uppercase;
@@ -498,19 +498,19 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   color: ${({$tipo:e})=>e===`leyenda`?`#e63946`:`rgba(255,255,255,0.5)`};
   border: 1px solid ${({$tipo:e})=>e===`leyenda`?`rgba(230,57,70,0.3)`:`rgba(255,255,255,0.1)`};
   margin-left: auto;
-`,cv=P.h1`
+`,sv=P.h1`
   font-family: ${({theme:e})=>e.fonts.display};
   font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 900;
   line-height: 1.1;
-`,lv=P.div`
+`,cv=P.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 1.5rem 0;
   border-top: 1px solid ${({theme:e})=>e.colors.border};
   border-bottom: 1px solid ${({theme:e})=>e.colors.border};
-`,uv=P.div`
+`,lv=P.div`
   text-align: center;
 
   span:first-child {
@@ -529,11 +529,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     letter-spacing: 0.1em;
     margin-top: 0.25rem;
   }
-`,dv=P.p`
+`,uv=P.p`
   color: ${({theme:e})=>e.colors.textSecondary};
   font-size: 0.95rem;
   line-height: 1.7;
-`,fv=P.button`
+`,dv=P.button`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -549,14 +549,14 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   &:hover {
     opacity: 0.8;
   }
-`,pv=P(Lg.div)`
+`,fv=P(Lg.div)`
   background: ${({theme:e})=>e.colors.surfaceGlass};
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 0.75rem;
   border: 1px solid ${({theme:e})=>e.colors.border};
-`,mv=P.p`
+`,pv=P.p`
   font-size: 0.9rem;
   color: ${({theme:e})=>e.colors.textSecondary};
   line-height: 1.7;
@@ -564,24 +564,24 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   & + & {
     margin-top: 1rem;
   }
-`,hv=P.div`
+`,mv=P.div`
   background: linear-gradient(135deg, rgba(212, 168, 83, 0.08), rgba(230, 57, 70, 0.08));
   padding: 1.25rem;
   border-radius: 0.75rem;
   border: 1px solid rgba(212, 168, 83, 0.2);
-`,gv=P.span`
+`,hv=P.span`
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: ${({theme:e})=>e.colors.gold};
   font-weight: 700;
-`,_v=P.p`
+`,gv=P.p`
   font-size: 0.9rem;
   color: ${({theme:e})=>e.colors.text};
   margin-top: 0.5rem;
   line-height: 1.6;
   font-style: italic;
-`;function vv({car:e}){let[t,n]=(0,w.useState)(!1),[r,i]=(0,w.useState)(!0),a=a_(e?.id);return e?(0,$.jsxs)(J_,{children:[(0,$.jsx)(Y_,{}),(0,$.jsxs)(X_,{children:[(0,$.jsx)(ev,{initial:{opacity:0,x:-60},animate:{opacity:1,x:0},transition:{duration:.6,ease:`easeOut`},children:(0,$.jsxs)(tv,{$marca:e.marca,onMouseEnter:()=>i(!0),onMouseLeave:()=>i(!1),children:[(0,$.jsx)(q_,{src:`/images/${e.imagen}`,alt:`${e.marca} ${e.modelo}`,marca:e.marca,onHover:a.play,onLeave:a.stop}),(0,$.jsx)(Wm,{children:r&&(0,$.jsx)(nv,{initial:{opacity:0,scale:.5},animate:{opacity:.08,scale:1},exit:{opacity:0,scale:.5},transition:{duration:1.2,ease:`easeInOut`},children:e.marca.toUpperCase()})})]})}),(0,$.jsxs)(rv,{initial:{opacity:0,x:60},animate:{opacity:1,x:0},transition:{duration:.8,ease:`easeOut`,delay:.2},children:[(0,$.jsx)(iv,{to:`/`,children:`← Todos los autos`}),(0,$.jsxs)(av,{children:[Q_[e.marca]&&(0,$.jsx)(ov,{src:`${Z_}/${Q_[e.marca]}`,alt:e.marca}),e.pais,` · `,e.marca,e.categoria&&(0,$.jsx)(sv,{$tipo:e.categoria,children:e.categoria})]}),(0,$.jsx)(cv,{children:e.modelo}),(0,$.jsxs)(lv,{children:[(0,$.jsxs)(uv,{children:[(0,$.jsx)(`span`,{children:e.especificaciones.potencia}),(0,$.jsx)(`span`,{children:`HP`})]}),(0,$.jsxs)(uv,{children:[(0,$.jsxs)(`span`,{children:[e.especificaciones.aceleracion,`s`]}),(0,$.jsx)(`span`,{children:`0-100 km/h`})]}),(0,$.jsxs)(uv,{children:[(0,$.jsx)(`span`,{children:e.especificaciones.velocidadMaxima}),(0,$.jsx)(`span`,{children:`km/h`})]})]}),(0,$.jsx)(dv,{children:e.impacto}),(0,$.jsxs)(fv,{onClick:()=>n(!t),children:[t?`▼`:`▶`,` `,t?`Ocultar historia`:`Leer historia completa`]}),(0,$.jsx)(Wm,{initial:!1,children:t&&(0,$.jsxs)(pv,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.25},children:[(0,$.jsxs)(mv,{children:[(0,$.jsx)(`strong`,{children:`Historia:`}),` `,e.historia]}),(0,$.jsxs)(mv,{children:[(0,$.jsx)(`strong`,{children:`Motivación:`}),` `,e.motivacion]})]})}),e.famosoPor&&(0,$.jsxs)(hv,{children:[(0,$.jsx)(gv,{children:`⭐ Por qué es leyenda`}),(0,$.jsx)(_v,{children:e.famosoPor})]})]})]})]}):(0,$.jsxs)(J_,{children:[(0,$.jsx)(`p`,{children:`Auto no encontrado`}),(0,$.jsx)(iv,{to:`/`,children:`Volver al inicio`})]})}var yv=P(Lg.div)`
+`;function _v({car:e}){let[t,n]=(0,w.useState)(!1),[r,i]=(0,w.useState)(!0),a=i_(e?.id);return e?(0,$.jsxs)(q_,{children:[(0,$.jsx)(J_,{}),(0,$.jsxs)(Y_,{children:[(0,$.jsx)($_,{initial:{opacity:0,x:-60},animate:{opacity:1,x:0},transition:{duration:.6,ease:`easeOut`},children:(0,$.jsxs)(ev,{$marca:e.marca,onMouseEnter:()=>i(!0),onMouseLeave:()=>i(!1),children:[(0,$.jsx)(K_,{src:`/los-mejores-carros-deportivos/images/${e.imagen}`,alt:`${e.marca} ${e.modelo}`,marca:e.marca,onHover:a.play,onLeave:a.stop}),(0,$.jsx)(Wm,{children:r&&(0,$.jsx)(tv,{initial:{opacity:0,scale:.5},animate:{opacity:.08,scale:1},exit:{opacity:0,scale:.5},transition:{duration:1.2,ease:`easeInOut`},children:e.marca.toUpperCase()})})]})}),(0,$.jsxs)(nv,{initial:{opacity:0,x:60},animate:{opacity:1,x:0},transition:{duration:.8,ease:`easeOut`,delay:.2},children:[(0,$.jsx)(rv,{to:`/`,children:`← Todos los autos`}),(0,$.jsxs)(iv,{children:[Z_[e.marca]&&(0,$.jsx)(av,{src:`${X_}/${Z_[e.marca]}`,alt:e.marca}),e.pais,` · `,e.marca,e.categoria&&(0,$.jsx)(ov,{$tipo:e.categoria,children:e.categoria})]}),(0,$.jsx)(sv,{children:e.modelo}),(0,$.jsxs)(cv,{children:[(0,$.jsxs)(lv,{children:[(0,$.jsx)(`span`,{children:e.especificaciones.potencia}),(0,$.jsx)(`span`,{children:`HP`})]}),(0,$.jsxs)(lv,{children:[(0,$.jsxs)(`span`,{children:[e.especificaciones.aceleracion,`s`]}),(0,$.jsx)(`span`,{children:`0-100 km/h`})]}),(0,$.jsxs)(lv,{children:[(0,$.jsx)(`span`,{children:e.especificaciones.velocidadMaxima}),(0,$.jsx)(`span`,{children:`km/h`})]})]}),(0,$.jsx)(uv,{children:e.impacto}),(0,$.jsxs)(dv,{onClick:()=>n(!t),children:[t?`▼`:`▶`,` `,t?`Ocultar historia`:`Leer historia completa`]}),(0,$.jsx)(Wm,{initial:!1,children:t&&(0,$.jsxs)(fv,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.25},children:[(0,$.jsxs)(pv,{children:[(0,$.jsx)(`strong`,{children:`Historia:`}),` `,e.historia]}),(0,$.jsxs)(pv,{children:[(0,$.jsx)(`strong`,{children:`Motivación:`}),` `,e.motivacion]})]})}),e.famosoPor&&(0,$.jsxs)(mv,{children:[(0,$.jsx)(hv,{children:`⭐ Por qué es leyenda`}),(0,$.jsx)(gv,{children:e.famosoPor})]})]})]})]}):(0,$.jsxs)(q_,{children:[(0,$.jsx)(`p`,{children:`Auto no encontrado`}),(0,$.jsx)(rv,{to:`/`,children:`Volver al inicio`})]})}var vv=P(Lg.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -592,17 +592,17 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   justify-content: space-between;
   align-items: center;
   ${({theme:e})=>e.glassmorphism};
-`,bv=P(Fn)`
+`,yv=P(Fn)`
   font-family: ${({theme:e})=>e.fonts.display};
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: ${({theme:e})=>e.colors.text};
-`,xv=P.div`
+`,bv=P.div`
   display: flex;
   gap: 1rem;
   align-items: center;
-`,Sv=P(Fn)`
+`,xv=P(Fn)`
   font-size: 0.8rem;
   color: ${({theme:e})=>e.colors.textSecondary};
   transition: color 0.2s ease;
@@ -610,10 +610,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   &:hover {
     color: ${({theme:e})=>e.colors.accent};
   }
-`,Cv=P.div`
+`,Sv=P.div`
   display: flex;
   gap: 0.5rem;
-`,wv=P(Fn)`
+`,Cv=P(Fn)`
   padding: 0.4rem 0.8rem;
   font-size: 0.75rem;
   border: 1px solid ${({theme:e})=>e.colors.border};
@@ -625,12 +625,12 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     border-color: ${({theme:e})=>e.colors.accent};
     color: ${({theme:e})=>e.colors.accent};
   }
-`;function Tv(){let{id:e}=vt(),t=T_.find(t=>t.id===e),n=T_.findIndex(t=>t.id===e),r=n>0?T_[n-1]:null,i=n<T_.length-1?T_[n+1]:null;return(0,$.jsxs)($.Fragment,{children:[(0,$.jsxs)(yv,{initial:{y:-80},animate:{y:0},transition:{duration:.5,ease:`easeOut`},children:[(0,$.jsx)(bv,{to:`/`,children:`VELOCITY ICONS`}),(0,$.jsxs)(xv,{children:[(0,$.jsx)(Sv,{to:`/`,children:`← Colección`}),(0,$.jsxs)(Cv,{children:[r&&(0,$.jsx)(wv,{to:`/auto/${r.id}`,children:`← Anterior`}),i&&(0,$.jsx)(wv,{to:`/auto/${i.id}`,children:`Siguiente →`})]})]})]}),(0,$.jsx)(vv,{car:t})]})}function Ev(){return(0,$.jsxs)(Wt,{children:[(0,$.jsx)(Ht,{path:`/`,element:(0,$.jsx)(P_,{})}),(0,$.jsx)(Ht,{path:`/auto/:id`,element:(0,$.jsx)(Tv,{})})]})}var Dv={colors:{bg:`#0a0a0f`,bgLight:`#12121a`,surface:`#1a1a28`,surfaceGlass:`rgba(26, 26, 40, 0.6)`,border:`rgba(255, 255, 255, 0.06)`,text:`#f0f0f5`,textSecondary:`#8888a0`,accent:`#e63946`,accentGlow:`#ff4d5a`,gold:`#d4a853`},fonts:{body:`'Inter', sans-serif`,display:`'Orbitron', monospace`},breakpoints:{mobile:`480px`,tablet:`768px`,desktop:`1024px`},glassmorphism:`
+`;function wv(){let{id:e}=vt(),t=w_.find(t=>t.id===e),n=w_.findIndex(t=>t.id===e),r=n>0?w_[n-1]:null,i=n<w_.length-1?w_[n+1]:null;return(0,$.jsxs)($.Fragment,{children:[(0,$.jsxs)(vv,{initial:{y:-80},animate:{y:0},transition:{duration:.5,ease:`easeOut`},children:[(0,$.jsx)(yv,{to:`/`,children:`VELOCITY ICONS`}),(0,$.jsxs)(bv,{children:[(0,$.jsx)(xv,{to:`/`,children:`← Colección`}),(0,$.jsxs)(Sv,{children:[r&&(0,$.jsx)(Cv,{to:`/auto/${r.id}`,children:`← Anterior`}),i&&(0,$.jsx)(Cv,{to:`/auto/${i.id}`,children:`Siguiente →`})]})]})]}),(0,$.jsx)(_v,{car:t})]})}function Tv(){return(0,$.jsxs)(Wt,{children:[(0,$.jsx)(Ht,{path:`/`,element:(0,$.jsx)(N_,{})}),(0,$.jsx)(Ht,{path:`/auto/:id`,element:(0,$.jsx)(wv,{})})]})}var Ev={colors:{bg:`#0a0a0f`,bgLight:`#12121a`,surface:`#1a1a28`,surfaceGlass:`rgba(26, 26, 40, 0.6)`,border:`rgba(255, 255, 255, 0.06)`,text:`#f0f0f5`,textSecondary:`#8888a0`,accent:`#e63946`,accentGlow:`#ff4d5a`,gold:`#d4a853`},fonts:{body:`'Inter', sans-serif`,display:`'Orbitron', monospace`},breakpoints:{mobile:`480px`,tablet:`768px`,desktop:`1024px`},glassmorphism:`
     background: rgba(18, 18, 26, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.06);
-  `},Ov=so`
+  `},Dv=so`
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -684,4 +684,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     background: ${({theme:e})=>e.colors.accent};
     color: ${({theme:e})=>e.colors.bg};
   }
-`,kv=document.getElementById(`root`);if(!kv)throw Error(`Root element not found`);ci.createRoot(kv).render((0,$.jsx)(w.StrictMode,{children:(0,$.jsx)(Mn,{basename:`/los-mejores-carros-deportivos`,children:(0,$.jsxs)(Ya,{theme:Dv,children:[(0,$.jsx)(Ov,{}),(0,$.jsx)(Ev,{})]})})}));
+`,Ov=document.getElementById(`root`);if(!Ov)throw Error(`Root element not found`);ci.createRoot(Ov).render((0,$.jsx)(w.StrictMode,{children:(0,$.jsx)(Mn,{basename:`/los-mejores-carros-deportivos`,children:(0,$.jsxs)(Ya,{theme:Ev,children:[(0,$.jsx)(Dv,{}),(0,$.jsx)(Tv,{})]})})}));
